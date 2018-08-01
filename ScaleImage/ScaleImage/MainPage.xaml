@@ -1,14 +1,20 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:local="clr-namespace:ScaleImage"
-             x:Class="ScaleImage.MainPage">
+			 xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+			 xmlns:local="clr-namespace:ScaleImage"
+			 x:Class="ScaleImage.MainPage">
 
-    <StackLayout>
-        <!-- Place new controls here -->
-    	<Label Text="Welcome to Xamarin.Forms!" 
-           HorizontalOptions="Center"
-           VerticalOptions="CenterAndExpand" />
-    </StackLayout>
+	<ContentPage.Resources>
+		<ResourceDictionary>
+			<local:CoefConverter x:Key="cc" />
+		</ResourceDictionary>
+	</ContentPage.Resources>
+
+	<StackLayout x:Name="theStack">
+		
+		<Image Source="mountain.jpg" Aspect="AspectFit" HeightRequest="{Binding Source={x:Reference theStack}, Path=Width, Converter={StaticResource cc}, ConverterParameter=0.25}"  />
+		<Label Text="This is some text" />
+
+	</StackLayout>
 
 </ContentPage>

@@ -156,4 +156,7 @@
       <Name>ScaleImage</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\mountain.jpg" />
+  </ItemGroup>
 </Project>
