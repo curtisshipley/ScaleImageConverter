@@ -12,7 +12,7 @@
 
 	<StackLayout x:Name="theStack">
 		
-		<Image Source="mountain.jpg" Aspect="AspectFit" HeightRequest="{Binding Source={x:Reference theStack}, Path=Width, Converter={StaticResource cc}, ConverterParameter=0.25}"  />
+		<Image Source="mountain.jpg" Aspect="AspectFit" HorizontalOptions="Start" HeightRequest="{Binding Source={x:Reference theStack}, Path=Width, Converter={StaticResource cc}, ConverterParameter=0.25}"  />
 		<Label Text="This is some text" />
 
 	</StackLayout>
